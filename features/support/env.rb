@@ -12,6 +12,10 @@ require 'cucumber/rails'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
+# Attempt to set the application's host under the assumption that external
+# requests won't hit this app.
+Capybara.app_host = Capybara.default_host = 'bing.com'
+
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how 
 # your application behaves in the production environment, where an error page will 

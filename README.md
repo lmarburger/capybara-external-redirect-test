@@ -18,7 +18,7 @@
        Feature: Redirect externally
 
          Scenario: Redirect externally # features/redirect_externally.feature:2
-       ["ApplicationController#redirect_externally", "www.example.com"]
+       ["ApplicationController#redirect_externally", "bing.com"]
        ["ApplicationController#redirect_externally", "google.com"]
        ["ApplicationController#redirect_externally", "google.com"]
        ["ApplicationController#redirect_externally", "google.com"]
