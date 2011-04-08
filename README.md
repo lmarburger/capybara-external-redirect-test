@@ -12,27 +12,26 @@
 6. `rm public/index.html`
 7. Run cucumber
 
-
        $ bundle exec cucumber
 
        Using the default profile...
        Feature: Redirect externally
-       
+
          Scenario: Redirect externally # features/redirect_externally.feature:2
-       "ApplicationController#redirect_externally"
-       "ApplicationController#redirect_externally"
-       "ApplicationController#redirect_externally"
-       "ApplicationController#redirect_externally"
-       "ApplicationController#redirect_externally"
-       "ApplicationController#redirect_externally"
+       ["ApplicationController#redirect_externally", "www.example.com"]
+       ["ApplicationController#redirect_externally", "google.com"]
+       ["ApplicationController#redirect_externally", "google.com"]
+       ["ApplicationController#redirect_externally", "google.com"]
+       ["ApplicationController#redirect_externally", "google.com"]
+       ["ApplicationController#redirect_externally", "google.com"]
            When I go to the home page  # features/step_definitions/web_steps.rb:48
              redirected more than 5 times, check for infinite redirects. (Capybara::InfiniteRedirectError)
              ./features/step_definitions/web_steps.rb:49:in `/^(?:|I )go to (.+)$/'
              features/redirect_externally.feature:3:in `When I go to the home page'
-       
+
        Failing Scenarios:
        cucumber features/redirect_externally.feature:2 # Scenario: Redirect externally
-       
+
        1 scenario (1 failed)
        1 step (1 failed)
        0m0.266s
